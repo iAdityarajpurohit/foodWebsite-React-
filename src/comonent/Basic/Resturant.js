@@ -3,6 +3,7 @@ import "./style.css";
 import Menu from "./menuApi.js";
 import MenuCard from "./MenuCard";
 import Navbar from "./Navbar";
+import NewPage from "./newPage";
 
 const uniqueList = [
   ...new Set(
@@ -18,6 +19,7 @@ console.log(uniqueList);
 const Resturant = () => {
   const [menuData, setMenuData] = useState(Menu);
   const [menuList, setMenuList] = useState(uniqueList);
+  console.log("menudata  ",menuData);
 
   const filterItem = (category) => {
     if (category === "All") {
@@ -30,12 +32,14 @@ const Resturant = () => {
     });
 
     setMenuData(updatedList);
+  
   };
 
   return (
     <>
       <Navbar filterItem={filterItem} menuList={menuList} />
       <MenuCard menuData={menuData} />
+      
     </>
   );
 };

@@ -6,13 +6,12 @@ import React from 'react'
            <nav className='navbar'>
             <div className="btn-group">
                 {
-                    menuList.map((currElm)=>{
+                    menuList.map((currElm,index)=>{
                    return(  
                    
-                   <button className="btn-group__item" onClick={() => filterItem(currElm)} >{currElm}</button>)
+                   <button key={index} className="btn-group__item" onClick={() => filterItem(currElm)} >{currElm}</button>)
                     })
                 }
-              
             </div>
         </nav>
     </>

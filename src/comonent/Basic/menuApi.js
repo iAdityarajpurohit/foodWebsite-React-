@@ -72,7 +72,7 @@ const menu = [
     description: "After a very nice (though expensive) supper in our hotel the eve before, we opted for a local dinner on our last evening in India and what a winner it turned out to be! The best veg thali we've ever had, I've never had yoghut curry before but infused with tamarind it was delicious! A whole variety of new tastes and dishes and it just kept coming. Excellent value for money and very courteous and attentive staff, you won't be disappointed but drinkers be aware that there is no licence to serve alcohol. Trust me, once you've tasted the good, all thoughts of alcohol will be long forgotten"
 },
 {
-    id:9,
+    id:10,
     image: "image/corn.jpg",
     price :  "₹ 300",
     name: "corn",

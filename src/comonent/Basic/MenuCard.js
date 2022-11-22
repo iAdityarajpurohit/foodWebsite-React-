@@ -1,19 +1,33 @@
 import React from 'react'
+import {Link, useNavigate} from 'react-router-dom';
+
+
 
  const MenuCard = ( { menuData } ) => {
-    // console.log(menuData);
-
+    // console.log(menuData );
+    const navigate = useNavigate();
     return (
         
         <>
       <section className='main-card--cointainer'>
-      { menuData.map((currElm)=>{
+      { menuData.map((currElm,index)=>{
 
-        const {id, name,category,image,description} = currElm;
+        const {id, price, name,category,image,description} = currElm;
+
+        
+        const openOrderPage = (name) => {
+            navigate("/newPage", {
+              state: {
+                name: name,
+                image:image,
+                amount:price
+              }
+            })
+        }
 
               return(
-                <>
-                <div className='card-container' key={id}>
+                <React.Fragment key={id}>
+                <div className='card-container'>
                 <div className='card'>
                     <span className='card-number card-circle subtle'>{id}</span>
                     <span className='card-author subtle'>{category}</span>
@@ -22,10 +36,11 @@ import React from 'react'
                     <div className='card-read'>Read</div>
                 </div>
                 <img src={image}  alt="image" className='card-media'/>
-
-                <span className='card-tag subtle'>Order Now</span>
+                {/* <Link to={{pathname:"/newPage",state:{name: name}}} className='card-tag subtle'>Order Now</Link> */}
+                {/* <button onClick= {() => openOrderPage(name)}> Order Now1</button> */}
+                <span className='card-tag subtle' onClick= {() => openOrderPage(name)}  >Order Now</span>
             </div>
-            </>
+            </React.Fragment>
             )
         })
     }

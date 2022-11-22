@@ -213,3 +213,40 @@
     opacity: 1;
     transform: translatey(-2px);
   }
+  .cart-Item{
+    position:absolute;
+    top:0;
+    right:0;
+    background-color: red;
+    color: red;
+    height: 100px;
+    border-radius: 50px;
+  }
+  .counter{
+    width: 35px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    color: red;
+    font-size: 28px;
+    position:absolute;
+    top:2px;
+    right:15px;
+    background-color: rgb(199, 29, 29);
+    color: white;
+    border-radius: 80px;
+    
+  }
+  .buton2{
+   
+    font-size: 25px;
+    padding: 8px;
+     margin: 5px;
+  }
+  .buton1{
+   
+    font-size: 25px;
+    padding: 8px;
+     margin: 5px;
+  }
+ 

@@ -8,6 +8,9 @@ import Todo from './comonent/Todo-react/todo';
 import Temperatur from './comonent/weather/temperatur';
 import Temp from './comonent/weather/temperatur';
 import ColorPicker from './comonent/weather/colorPicker';
+//
+import NewPage from './comonent/Basic/newPage';
+import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 
 const App = () => {
 
@@ -25,8 +28,15 @@ const App = () => {
      {/* {< UseReducer />} */}
     {/* {< UseEffect />} */}
     {/* {< UseState />} */}
+   <Router>
+    <Routes>
+    <Route exact path='/' element={< Resturant />}></Route>
+    <Route exact path='/newPage' element={< NewPage />}>
+    </Route>
+     
+    </Routes>
+   </Router>
 
-     {<Resturant/>}
     </>
   )
 };
