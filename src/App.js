@@ -22,7 +22,7 @@ const App = () => {
         {/* { < ColorPicker /> } */}
           {/* { < Temp />} */}
 
-      {/* {< Todo />} */}
+//       {< Todo />}
        
 
      {/* {< UseReducer />} */}
